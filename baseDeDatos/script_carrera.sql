@@ -82,3 +82,18 @@ begin
 	@cuatrimestre,
 	@id_asignatura)
 end
+
+create procedure sp_carrera_filtro
+	@nombre_carrera varchar(150),
+	@titulo varchar(100)
+as
+begin
+	select * from
+end	
+
+
+/*------------------------------*/
+use carrera_planes_de_estudio
+
+select * from Carrera
+select * from DetalleCarrera

@@ -46,14 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Datos\DBHelper.cs" />
+    <Compile Include="Datos\Parametro.cs" />
+    <Compile Include="Entidades\Asignatura.cs" />
+    <Compile Include="Entidades\Carrera.cs" />
+    <Compile Include="Entidades\DetalleCarrera.cs" />
+    <Compile Include="Presentaciones\FrmConsultarCarreras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentaciones\FrmConsultarCarreras.Designer.cs">
+      <DependentUpon>FrmConsultarCarreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FrmNuevoPlanDeEstudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FrmNuevoPlanDeEstudio.Designer.cs">
+      <DependentUpon>FrmNuevoPlanDeEstudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentaciones\FrmConsultarCarreras.resx">
+      <DependentUpon>FrmConsultarCarreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FrmNuevoPlanDeEstudio.resx">
+      <DependentUpon>FrmNuevoPlanDeEstudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,10 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Datos\" />
-    <Folder Include="Entidades\" />
-    <Folder Include="Presentaciones\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
