@@ -83,17 +83,15 @@ begin
 	@id_asignatura)
 end
 
-create procedure sp_carrera_filtro
+alter procedure sp_carrera_filtro
 	@nombre_carrera varchar(150),
 	@titulo varchar(100)
 as
 begin
-	select * from
+	select *
+	from Carrera c
+	where (@nombre_carrera is null OR c.nombre_carrera like '%'+ @nombre_carrera + '%') AND (@titulo is null or c.titulo like '%'+ @titulo + '%')
 end	
-
 
 /*------------------------------*/
 use carrera_planes_de_estudio
-
-select * from Carrera
-select * from DetalleCarrera

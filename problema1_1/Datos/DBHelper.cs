@@ -147,16 +147,14 @@ namespace problema1_1.Datos
 
         }
 
-        //REFACTORIZAR
         public DataTable ConsultarTabla(string nombreSP, List<Parametro> lstParametros)
         {
-
             conexion.Open();
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexion;
             comando.CommandType = CommandType.StoredProcedure;
-            //le paso el nombre del sp a ejecutar
+
             comando.CommandText = nombreSP;
 
             foreach (Parametro p in lstParametros)
